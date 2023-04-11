@@ -12,9 +12,11 @@ public class CarDealershipApplication {
 
 	public static void main(String[] args) {
 //		SpringApplication.run(CarDealershipApplication.class, args);
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please enter your name");
+	    String name = scanner.nextLine();
 		System.out.println("please slect a car of choise");
 		System.out.println("options \n 1)family car \n 2)sports car \n 3)truck");
-		Scanner scanner = new Scanner(System.in);
 		int type = scanner.nextInt();
 	    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 	    
@@ -46,7 +48,8 @@ public class CarDealershipApplication {
 	    	return;
 	    }
 	    
-	    System.out.println(car.getInfo());
+	    car.setName(name);
+	    System.out.println(car.getName()+" now owns "+car.getInfo());
 
 	}
 
