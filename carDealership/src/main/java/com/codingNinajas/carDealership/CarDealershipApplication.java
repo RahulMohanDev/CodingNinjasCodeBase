@@ -21,8 +21,20 @@ public class CarDealershipApplication {
 	    Car car = null;
 	    switch(type) {
 	    case 1:
-	    	car = context.getBean("normalCar",Car.class);
-	    	break;
+	    	System.out.println("please choose the tyre\n 1)normal 2)heavy");
+			int tyre= scanner.nextInt();
+			switch(tyre) {
+			case 1:
+				car = context.getBean("normalCarNormalTyre",Car.class);
+				break;
+			case 2:
+				car = context.getBean("normalCarSportsTyre",Car.class);
+				break;
+			default: 
+				System.out.println("wrong tyre selected");
+				return;
+			}
+			break;
 	    case 2:
 	    	car = context.getBean("sportsCar",Car.class);
 	    	break;

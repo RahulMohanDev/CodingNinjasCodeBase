@@ -11,8 +11,12 @@
 
     <bean id="sportsTyre" class="com.codingNinajas.carDealership.SportsCarTyre" />
     
-    <bean id="normalCar" class="com.codingNinajas.carDealership.familyCar">
+    <bean id="normalCarNormalTyre" class="com.codingNinajas.carDealership.familyCar">
         <constructor-arg ref="normalTyre" />
+    </bean>
+    
+     <bean id="normalCarSportsTyre" class="com.codingNinajas.carDealership.familyCar">
+        <constructor-arg ref="heavyTyre" />
     </bean>
     
     <bean id="sportsCar" class="com.codingNinajas.carDealership.SportsCar">
