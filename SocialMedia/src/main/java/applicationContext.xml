@@ -4,6 +4,8 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- bean definitions here -->
-    <bean id="postList" class="com.codingNinjas.SocialMedia.SimplePostList" scope="singleton"/>
+    <bean id="postList" class="com.codingNinjas.SocialMedia.SimplePostList" scope="singleton"
+    init-method="init" destroy-method="destroy"
+    />
     <bean id="post" class="com.codingNinjas.SocialMedia.SimplePost" scope="prototype"/>
 </beans>

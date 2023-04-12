@@ -45,6 +45,7 @@ public class SocialMediaApplication {
 		}
 	}
 	scanner.close();
+	context.close();
 	}
 
 }

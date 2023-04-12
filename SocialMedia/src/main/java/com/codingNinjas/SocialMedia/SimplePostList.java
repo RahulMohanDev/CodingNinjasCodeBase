@@ -6,6 +6,15 @@ public class SimplePostList implements PostList {
 	
 	ArrayList<Post> posts;
 	
+	public void init() {
+		System.out.println("The post list has been initalized");
+	}
+	
+	public void destroy() {
+		System.out.println("The post list has been distroyed");
+	}
+	
+	
 	public SimplePostList() {
 		this.posts =new ArrayList<Post>();
 	}
